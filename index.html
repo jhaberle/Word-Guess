@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+        <title>Jake's Word Guess Game</title>
+
+    </head>
+    <body>
+        <div id="game">
+            <p>Press any key to start playing!</p>
+        </div>
+
+        <script type="text/javascript">
+
+        let display = document.querySelector('.display');
+        let guessQuerySelector = document.querySelector('#character');
+        let textForm = document.querySelector('.textForm');
+        var players = ["Elway", "Atwater", "NoFlyZone", "VonMiller", "Chubb", "DrewLock", "Terrell Davis", "EddieMac"];
+        
+        
+        // Grabbing a random player
+        var chooseRandomPlayer = function(array) {
+            return array[math.floor(math.random() * array.length)];
+        }
+        
+        var chosenPlayer = chooseRandomPlayer(players);
+        console.log('chosenPlayer', chosenPlayer);
+
+
+        // This is the function that submits the user values
+        textForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var guesses = 10;
+            var correctCharacters = [];
+            var triedCharacters = [];
+
+            var guessPlayer = guessQuerySelector.value;
+            var shorterPlayerLength = chosenPlayer.length > guessPlayer.length ? guessPlayer.length : chosenPlayer.length;
+
+            console.log ('guessPLayer' , guessPlayer);
+
+            for (i = 0; i < shorterPlayerLength; i++) {
+                if (guessPlayer [i] === chosenPlayer[i]) {
+                    correctCharacters.push(guessPlayer[i]) 
+                        console.log('correct' , correctCharacters)
+                    } else {
+                        triedCharacters.push(guessPlayer[i])
+                        console.log('incorrect' , triedCharacters)
+                    }
+                }
+            chosenPlayer = chooseRandomPlayer(players);
+            console.log('chosenPlayer', chosenPlayer); 
+        })
+
+        
+        </script>
+    </body>
+
+
+</html>
