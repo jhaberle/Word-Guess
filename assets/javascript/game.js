@@ -1,14 +1,14 @@
 //VARIABLES
-var words = ["elway", "eddiemac", "terrelldavis", "drewlock", "vonmiller", "chubb"];
+var words = ["elway", "drewlock", "eddiemac", "terrelldavis", "vonmiller", "chubb", "aquibtalib"]
 
-//Empty variables to store values later
+
 var randomWord = "";
-var lettersOfWord = []
+var lettersOfWord = [];
 var blanks = 0;
 var blanksAndCorrect = [];
 var wrongGuess = [];
 
-//Counter Variables
+
 var wins = 0;
 var losses = 0;
 var guessesRemaining = 9;
@@ -23,24 +23,24 @@ var guessesRemaining = 9;
 //GAME START FUNCTION
 //__________________________________________________________
 function Game() {
-    //computer generates random word from words array
+   
     randomWord = words[Math.floor(Math.random() * words.length)];
 
-    // split the individual word into separate arrays, and store in new array 
+     
     lettersOfWord = randomWord.split("");
 
-    //store length of word in blanks, for later use
+    
     blanks = lettersOfWord.length;
 
-    //creating a loop to generate "_" for each letter in array stored in blanks
+    
     for (var i = 0; i < blanks; i++) {
         blanksAndCorrect.push("_");
     }
 
-    //showing the "_" within HTML
+    
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
 
-    //console logging 
+  
     console.log(randomWord);
     console.log(lettersOfWord)
     console.log(blanks)
@@ -48,26 +48,40 @@ function Game() {
 }
 
 
-//__________________________________________________________
-//AUDIO FUNCTION
-//__________________________________________________________
-
-//variables for audio function
-var a = document.getElementById("arthur");
-var r = document.getElementById("rugrats");
-var simpsons = document.getElementById("simpsons");
-var scoobydoo = document.getElementById("scoobydoo");
-var spongebob = document.getElementById("spongebob");
-var danny = document.getElementById("danny");
-var teent = document.getElementById("teent");
 
 
 function aud() {
-    //Arthur Audio & Image
-    //---------------------------
-    if (randomWord === words[0, 1, 2, 3, 4, 5, 6]) {
- 
-};
+    
+   
+    if (randomWord === words[0]) {
+    
+        document.getElementById("image").src = "https://tse3.mm.bing.net/th?id=OIP.IllIbmEimW_poDtwrjHJLQHaE7&pid=Api&P=0&w=242&h=162";
+    }
+    else if (randomWord === words[1]) {
+        
+        document.getElementById("image").src = "https://usatbroncoswire.files.wordpress.com/2019/08/drew-lock-injury-5.jpg?w=1024&h=576&crop=1";
+    }
+    else if (randomWord === words[2]) {
+        
+        document.getElementById("image").src = "https://www.mcall.com/resizer/NmcX67DuPXA3L7tq08sWZKRJ7wc=/1200x0/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/PMAWGX2OSFEKLKVWRYZE7USGUI.jpg";
+    }
+    else if (randomWord === words[3]) {
+        
+        document.getElementById("image").src = "https://images.complex.com/complex/image/upload/c_fill,g_center,w_1200/fl_lossy,pg_1/dlr5ygedmtnp706285tn.jpg";
+    }
+    else if (randomWord === words[4]) {
+        
+        document.getElementById("image").src = "https://ftks732kpvy18zwzc2s17egw-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/Von-Miller-Sack-Dance-2.jpg";
+    }
+    else if (randomWord === words[5]) {
+        
+        document.getElementById("image").src = "https://tse1.mm.bing.net/th?id=OIP.ADCx15dRlD-mnKEunD7-7AHaE3&pid=Api&P=0&w=237&h=157";
+    }
+    else if (randomWord === words[6]) {
+        
+        document.getElementById("image").src = "https://sportshub.cbsistatic.com/i/r/2017/09/18/5845958d-9972-478e-b2a9-b0136dcf0c8d/thumbnail/770x433/285d8b6674e821341fcd7a04e913ac77/aqib-talib.jpg";
+    }
+}
 
 //__________________________________________________________
 //RESET FUNCTION

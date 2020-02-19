@@ -1,27 +1,19 @@
-  
-body {
-    background-image: url("../images/GroundedTinyBluejay-size_restricted.gif");
-    width: 100%
-}
+
 
 h1 {
     font-size: 43px;
     border: solid 5px orangered;
     background: navy;
     text-align: center;
-    margin-top: 2%;
-    margin-left: 10%;
-    margin-right:10%;
     padding: 15px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
 }
 
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     padding-top: 10px;
-    color: white;
 }
 
 
@@ -33,25 +25,25 @@ img {
 .sidebar {
     padding: 5px;
     position: relative;
-    border-top: solid navy 2px;
-    border-bottom: solid navy 2px;
+    border-top:navy 2px;
+    border-bottom: orangered 2px;
     margin-bottom: 5px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    color: white;
 }
 
 span {
-    border: solid navy 2px;
+    border: orangered 2px;
     padding-left: 3px;
     padding-right:3px;
-    background-color: yellow; 
+    background-color:navy; 
     font-size: 15px;
 }
 
 .background {
-    background-image: url("../images/backsplash.jpg");
+    background-color: navy;
     border: solid 5px orangered;
+
 }
 
 .container {
@@ -61,15 +53,15 @@ span {
     margin-right: 20%;
     margin-bottom: 5px;
     text-align: center;
-    border: solid 3px red;
+    border: solid 3px orangered;
+    color:white
 }
 
 #currentword {
     font-size: 30px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
     margin-top: 10px;
-    color: white;
 }
 
 #scoreboard {
